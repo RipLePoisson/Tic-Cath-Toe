@@ -725,15 +725,11 @@ function playResultAudio(result, botChoice) {
                         resultContainer.textContent = 'Draw!';
                         // Jouez l'audio pour l'égalité
                         audioElement.src = 'rps/draw.wav';
-                        const catherineImage = document.getElementById('play-button');
-                        catherineImage.style.transform = 'scale(1.1)';
+                        
                         
                         audioElement.play();
 
-                        // Réinitialiser l'effet de grossissement après la fin de l'audio
-                        audioElement.onended = function () {
-                            catherineImage.style.transform = 'scale(1)';
-                        };
+                        
                     }
                     toggleButtons(false);
                 }, 500); // Délai supplémentaire (en millisecondes)
