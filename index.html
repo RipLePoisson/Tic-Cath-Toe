@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Cath Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="background-image: url('images/fond.gif');">
+
+    <div id="audio-container">
+        <img id="play-button" src="images/cath.gif" alt="Play Button">
+        <audio id="audio" controls>
+            <source src="" type="audio/wav">
+        </audio>
+    </div>
+
+    <div id="random-characters"></div>
+    <div id="random-rectangles"></div>
+
+    <div id="game-container">
+        <div id="tic-tac-toe">
+            <h2>Tic Tac Toe</h2>
+            <div id="board" class="board-container"></div>
+            <p id="result"></p>
+            <button id="reset-button" class="glitch" onclick="resetGame()">Reset</button>
+        </div>
+
+        <button id="change-game-button" class="disabled-button" onclick="toggleGame()">
+            ▶
+        </div>
+
+
+    </div>
+
+    <div id="music-button" onclick="toggleMusic()">
+        <img id="music-icon" src="sound-icon.png" alt="Icône son">
+    </div>
+
+
+    <div id="rock-paper-scissors" style="display: none;">
+        <h2>Rock, Paper, Scissors</h2>
+        <div id="rps-result"></div>
+        <div id="rpc-buttons-container">
+            <button id="rock-button" class="disabled-button" onclick="playerChoice('rock')">✊</button>
+            <button id="paper-button" class="disabled-button" onclick="playerChoice('paper')">✋</button>
+            <button id="scissors-button" class="disabled-button" onclick="playerChoice('scissors')">✌️</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
